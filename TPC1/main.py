@@ -15,8 +15,8 @@ def doenc_por_sexo(dados):
 
     porcentagem_M = (por_sexo['Masculino']['doentes']/por_sexo['Masculino']['total']) * 100
     porcentagem_F = (por_sexo['Feminino']['doentes']/por_sexo['Feminino']['total']) * 100
-    por_sexo['Masculino']['Porcentagem'] = round(porcentagem_M,2)
-    por_sexo['Feminino']['Porcentagem'] = round(porcentagem_F,2)
+    por_sexo['Masculino']['porcentagem'] = round(porcentagem_M,2)
+    por_sexo['Feminino']['porcentagem'] = round(porcentagem_F,2)
 
     return por_sexo
 
