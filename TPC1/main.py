@@ -162,7 +162,7 @@ def main():
             print(doenc_por_sexo(dados))
             print("----NEW----")
         elif saida == 2:
-            print(doenc_nivel_colesterol(dados))
+            print(doenc_escalao_etario(dados))
             print("----NEW----")
         elif saida == 3:
             print(doenc_nivel_colesterol(dados))
