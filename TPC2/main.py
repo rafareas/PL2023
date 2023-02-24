@@ -2,29 +2,34 @@
 
 def somado_on_of():
 
-    on = "on"
-    off = "off"
     soma = 0
-    while True:
-        stdin = input("Introduza um número:")
-        if stdin.lower() == off.lower():
-            break
-        elif stdin.lower() == on.lower():
-            print('Comportamento reativado')
-            True
-        elif stdin == "=":
-            print(soma)
-        else:
-            soma += int(stdin)
+    somaTmp = 0
+    state = True
+    caracteres = []
+    stdin = input("Introduza uma sequencia:")
 
+    while True:
+        for c in stdin:
+            caracteres.append(c)
+        for i in range(len(caracteres)):
+            if caracteres[i].isdigit() and state == True:
+                soma += int(caracteres[i])
+            elif caracteres[i].lower() == "o":
+                if caracteres[i+1].lower() == "f" and caracteres[i+2].lower() == "f":
+                    print("comportamento desativado")
+                    state = False
+                if caracteres[i+1].lower() == "n":
+                    print("Comportamento ativado")
+                    state = True
+            elif caracteres[i] == "=":
+                print(soma)
+        caracteres = []
+        stdin = input()
     return soma
 
 
 def main():
-
     soma = somado_on_of()
-    print(soma)
-
 
 
 if __name__ == "__main__":
