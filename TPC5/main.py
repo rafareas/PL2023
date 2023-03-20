@@ -79,6 +79,10 @@ def main():
         if re.match(r'(?i:POUSAR)',res):
           print(f"maq: \"troco = {saldo_final}")
           break
+        if re.match(r'(?i:ABANDONAR)',res):
+            print("Abandonou a chamada")
+            print(f"maq: {saldo_final}")
+            break
 
 
 
